@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #id-card {
+        border: 3px solid black;
+        padding: 20px;
+        width: 280px;
+        background-color: wheat;
+        border-radius: 20px;
+        
+      }
+
+      #wishes {
+        border: 3px solid black;
+        padding: 10px;
+        width: 300px;
+        margin-top: 20px;
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="id-card">
+      <h3 style="color: brown;">10000 CODERS INSTITUTIONS</h3>
+      <h2 style="text-align: center;color: blue;">ID Card</h2>
+      <img src="../html/images/IMG HARIKA 1.jpg"/>
+      <p style="color: red;">Name: <span  id="name" style="color: black;"></span></p>
+      <p style="color: red;">Age: <span id="age" style="color: black;"></span></p>
+      <p style="color: red;">Occupation: <span id="occupation" style="color: black;"></span></p>
+    </div>
+    <div id="wishes">
+      <h2 style="color: gold;text-align: center;">Ganesh Chaturthi Wishes</h2>
+      <p id="wish-message"></p>
+    </div>
+    <script>
+      document.getElementById("name").innerHTML = "Harika";
+      document.getElementById("age").innerHTML = "21";
+      document.getElementById("occupation").innerHTML = "Software Engineer";
+      document.getElementById("wish-message").innerHTML =
+        "“This Ganesh Chaturthi, I pray that Lord Ganpati comes to your house with bags full of happiness, prosperity, and peace.” HAPPY GANESH CHATURTHI!!";
+    </script>
+  </body>
+</html>

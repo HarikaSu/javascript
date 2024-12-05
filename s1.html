@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="calculator">
+	<h1>Length Calculator</h1>
+    <form>
+      <label>Enter Length:</label>
+      <input type="text" id="lengthInput">
+      <br><br>
+      <label>From Unit:</label>
+      <select id="fromUnit">
+        <option value="inches">Inches</option>
+        <option value="centimeters">Centimeters</option>
+        <option value="feet">Feet</option>
+        <option value="meters">Meters</option>
+      </select>
+      <br><br>
+      <label>To Unit:</label>
+      <select id="toUnit">
+        <option value="inches">Inches</option>
+        <option value="centimeters">Centimeters</option>
+        <option value="feet">Feet</option>
+        <option value="meters">Meters</option>
+      </select>
+      <br><br>
+      <input type="button" value="Calculate" onclick="calculateLength()">
+      <br>< br>
+      <label>Result:< /label>
+      < input type="text" id="result" disabled>
+    < /form>
+ < div id="result">< /div>
+< /div>
+</body>
+</html>

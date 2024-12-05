@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="fm">
+        <label for="ip1">Name</label>
+        <br>
+        <input type="text" id="ip1">
+        <br>
+        <label for="ip2">Age</label>
+        <br>
+        <input type="number" id="ip2">
+        <br>
+        <label for="ip3">Blood Group</label>
+        <br>
+        <input type="text" id="ip3">
+        <br>
+        <label for="ip4">Location</label>
+        <br>
+        <input type="text" id="ip4">
+        <br><br>
+        <input type="submit" id="btn">
+    </form>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div id="id-card"></div>
+    <script>
+        let form=document.getElementById("fm");
+        let btn=document.getElementById("btn");
+        let idcard=document.getElementById("id-card");
+        btn.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let name=document.getElementById("ip1");
+            let age=document.getElementById("ip2").value;
+            let bloodgroup=document.getElementById("ip3").value;
+            let location=document.getElementById("ip4").value;
+            p[0].innerHTML=ip1.value;
+            p[0].innerHTML=ip2.value;
+            p[0].innerHTML=ip3.value;
+            p[0].innerHTML=ip4.value;
+            p[0].innerHTML=ip5.value;
+            
+        })
+    </script>
+
+</body>
+</html>

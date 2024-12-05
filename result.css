@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversion Result</h1>
+        <div id="conversionResult">
+            <!-- Conversion result will be displayed here -->
+        </div>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const resultContainer = document.getElementById("conversionResult");
+
+            // Retrieve result from localStorage
+            const result = localStorage.getItem("conversionResult");
+            const explanation = localStorage.getItem("conversionExplanation");
+
+            if (result && explanation) {
+                resultContainer.innerHTML = `
+                    <p>Converted Value: ${result}</p>
+                    <p>Explanation: ${explanation}</p>
+                `;
+            } else {
+                resultContainer.innerHTML = "<p>No conversion result found.</p>";
+            }
+        });
+
+        // Function to go back to the main page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

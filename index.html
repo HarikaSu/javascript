@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- <script src="simplecalci.js">
+        let a=prompt('enter the first operand:');;
+        let b=prompt('enter the second operand:');
+        let x=prompt('enter operator:');
+let c;
+switch(x){
+    case '+':
+        c=a+b;
+        break;
+    case '-':
+        c=a-b;
+        break;
+    case '*':
+        c=a*b;
+        break;
+    case '/':
+        c=a/b;
+        break;
+    case '%':
+        c=a%b;
+        break;
+    default:
+        c='invalid operator';
+
+} -->
+    
+    <script>
+        
+        let num = prompt("Enter a number: ");
+        let sum = 0;
+        for (let i = 0; i < num.length; i++) {
+             let digit = parseInt(num[i]);
+             if (digit > 1 && (digit !== 2 && digit !== 3 && digit !== 5 && digit !== 7)) {
+                 sum += digit;
+                }
+            }
+            console.log(sum);
+    </script>
+    
+</body>
+</html>

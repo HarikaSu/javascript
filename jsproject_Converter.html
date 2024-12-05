@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All-in-One Converter</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(to bottom right, #ffe3e3, #c2e9fb);
+      height: 100vh;
+    }
+    h1 {
+      margin: 20px 0;
+      font-size: 2.5rem;
+      color: #0072ff;
+    }
+    form {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+    select, input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #0072ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #005bb5;
+    }
+    #result, #history {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 400px;
+      text-align: left;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>All-in-One Converter</h1>
+  <form id="converter-form">
+    <select id="converter-type">
+      <option value="currency">Currency</option>
+      <option value="length">Length</option>
+      <option value="weight">Weight</option>
+      <option value="temperature">Temperature</option>
+      <option value="speed">Speed</option>
+    </select>
+    <input id="input-value" type="number" placeholder="Enter value" required />
+    <select id="from-unit"></select>
+    <select id="to-unit"></select>
+    <button type="submit">Convert</button>
+  </form>
+  <div id="result"></div>
+  <div id="history">
+    <h3>Conversion History</h3>
+    <ul id="history-list"></ul>
+  </div>
+
+  <script src="result.js"></script>
+</body>
+</html>

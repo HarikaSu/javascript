@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = prompt("Enter a number: ");
+        let primeCount = 0;
+        let nonPrimeCount = 0;
+        for (let i = 0; i < num.length; i++) {
+            let digit = parseInt(num[i]);
+            if (digit === 2 || digit === 3 || digit === 5 || digit === 7) { primeCount++;
+
+            } 
+            else if (digit !== 1) {
+                nonPrimeCount++;
+            }
+        }
+        console.log(primeCount > nonPrimeCount);
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="input-form">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <br>
+        <label for="age">Age:</label>
+        <br>
+        <input type="number" id="age" name="age">
+        <br>
+        <br>
+        <label for="blood-group">Blood Group:</label>
+        <br>
+        <input type="text" id="blood-group" name="blood-group">
+        <br>
+        <br>
+        <label for="location">Location:</label>
+        <br>
+        <input type="text" id="location" name="location">
+        <br>
+        <br>
+        <button id="submit-btn">Submit</button>
+      </form>
+      
+      <div id="id-card"></div>
+      
+      <script>
+        const form = document.getElementById('input-form');
+const submitBtn = document.getElementById('submit-btn');
+const idCardDiv = document.getElementById('id-card');
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const age = document.getElementById('age').value;
+  const bloodGroup = document.getElementById('blood-group').value;
+  const location = document.getElementById('location').value;
+
+  const idCardHTML = `
+    <h2>ID Card</h2>
+    <p>Name: ${name}</p>
+    <p>Age: ${age}</p>
+    <p>Blood Group: ${bloodGroup}</p>
+    <p>Location: ${location}</p>
+  `;
+
+  idCardDiv.innerHTML = idCardHTML;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // let p1=new Promise((x,y)=>{x("promise resolved")});
+        // // console.log(p1);
+        // let p1=new Promise((x,y)=>{x("promise resolved")})
+        // p1.then((e)=>{console.log(e)}).catch((e)=>{console.log(e)});
+        // let p1=new Promise((x,y)=>{y("promise rejected");});
+        // p1.then((e)=>{
+        //     console.log(e,"then block triggered");
+            
+        // })
+        // .catch((e)=>{
+        //     console.log(e,"catch block triggered");
+            
+        // });
+        // function signup(){
+        //     setTimeout(()=>{
+        //         console.log("Sign up completed");
+                
+        //     },2000);
+        // }
+        // function login() {
+        //     setTimeout(()=>{
+        //         console.log("login Successfully");
+                
+        //     },1000);
+        // }
+        // function home() {
+        //     setTimeout(()=>{
+        //         console.log("home page");
+                
+        //     },1500);
+        // }
+        // signup();login();home();
+        function signup(){
+            const p1=new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    res("sign up completed");
+                },2000);
+            });
+            return p1;
+        }
+        function login() {
+            const p2=new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    res("login successfully");
+                },1000);
+            });
+            return p2;
+        }
+        function home(){
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    res("home page");
+                },1500);
+            })
+            return p3
+        }
+        signup().then((e)=>{
+            console.log(e);return login()})
+            .then((e)=>{
+                console.log(e);return home()})
+            .then((e)=>console.log(e)).catch((e)=>{
+                console.log(e)});
+            
+            
+            
+        
+
+        
+    </script>
+    
+</body>
+</html>

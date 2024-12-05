@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="change-color">click me</button>
+    <script>
+      const changeColorButton = document.getElementById("change-color");
+
+      changeColorButton.addEventListener("click", () => {
+        const randomColor = getRandomColor();
+        document.body.style.backgroundColor = randomColor;
+    });
+
+      function getRandomColor() {
+        const colors = [
+          "red",
+          "blue",
+          "green",
+          "yellow",
+          "purple",
+          "orange",
+          "pink",
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+    </script>
+  </body>
+</html>
